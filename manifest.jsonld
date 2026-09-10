@@ -24,42 +24,42 @@
   "cells": [
     {
       "id": "cell:yomi.intake",
-      "method": "src/yomi/synthesis.cljc (node :intake)",
+      "method": "src/yomi/synthesis.kotoba (node :intake)",
       "input": "{:op :outlet/register|:article/register|:mention/register|:analyze|:publish ...}",
       "output": "routes ingest (→ :record) vs assess (→ :fetch-fulltext)",
       "doc": "entry; pure dispatch on op (record-op? from phase)"
     },
     {
       "id": "cell:yomi.record",
-      "method": "src/yomi/synthesis.cljc (node :record)",
+      "method": "src/yomi/synthesis.kotoba (node :record)",
       "input": "subscribed kawaraban mirror edge",
       "output": "durable EAVT ground datom + ledger {:t :recorded}",
       "doc": "the OBSERVE charter — always on, never an LLM call, never an actuation"
     },
     {
       "id": "cell:yomi.advise",
-      "method": "src/yomi/intelllm.cljc (-advise)",
+      "method": "src/yomi/intelllm.kotoba (-advise)",
       "input": "request + store (mock ‖ real LLM via langchain.model)",
       "output": "intel proposal {:facts :findings :entities :classification :credibility :priority :sources :provenance-chain :effect :confidence}",
       "doc": "the sealed intel-LLM; PROPOSES only, never binds; facts separated from findings; INSUFFICIENT-honest (G4)"
     },
     {
       "id": "cell:yomi.govern",
-      "method": "src/yomi/governor.cljc (check)",
+      "method": "src/yomi/governor.kotoba (check)",
       "input": "request + proposal",
       "output": "{:ok? :violations :confidence :hard? :escalate? :high-stakes?}",
       "doc": "IntelGovernor — INDEPENDENT system; enforces sourcing/provenance/open-access/libel/fleet-model/no-actuation + publish credibility(≥0.7)/priority(≥0.45) gates; :high-stakes? always false (no actuation)"
     },
     {
       "id": "cell:yomi.decide",
-      "method": "src/yomi/synthesis.cljc (node :decide) + src/yomi/phase.cljc",
+      "method": "src/yomi/synthesis.kotoba (node :decide) + src/yomi/phase.kotoba",
       "input": "verdict + phase",
       "output": ":publish | :hold",
       "doc": "phase gate (R0→R3); escalate folds to HOLD (yomi has no council — publication is autonomous, not a signoff path)"
     },
     {
       "id": "cell:yomi.publish",
-      "method": "src/yomi/synthesis.cljc (node :publish)",
+      "method": "src/yomi/synthesis.kotoba (node :publish)",
       "input": "assessment record",
       "output": "PRIVATE assessment datom + append-only ledger {:t :assessed :disposition :publish}",
       "doc": "records the attributed assessment (the actor's own voice) + genealogy entry"

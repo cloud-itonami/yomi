@@ -100,14 +100,14 @@ ledger → the same contract on `DatomicStore`.
 
 | File | Actor / role |
 |---|---|
-| `src/yomi/store.cljc` | SSoT — outlets · articles · mentions (kawaraban mirror) · cached fulltext · assessments; `MemStore` ‖ `DatomicStore` (langchain.db `:db-api`); append-only ledger |
-| `src/yomi/intelllm.cljc` | **intel-LLM** — the contained intelligence node (intel advisor); mock ‖ real LLM via `langchain.model` |
-| `src/yomi/governor.cljc` | **IntelGovernor** — independent intel invariants; HOLD on unsourced-claim, missing-provenance, non-open-fulltext, libel-risk, non-fleet-model, no-actuation; publish-gate HOLD on low-credibility/low-priority |
-| `src/yomi/phase.cljc` | R0→R3 staged rollout (path-reserved → supervised); `:publish` auto at R3 (no council) |
-| `src/yomi/synthesis.cljc` | **IntelActor** — the langgraph-clj StateGraph (1 run = 1 op); no `:request-approval` node (autonomous) |
-| `src/yomi/sim.cljc` | demo driver |
-| `test/yomi/governor_contract_test.clj` | the intel invariant, executable |
-| `test/yomi/store_contract_test.clj` | `MemStore ≡ DatomicStore` |
+| `src/yomi/store.kotoba` | SSoT — outlets · articles · mentions (kawaraban mirror) · cached fulltext · assessments; `MemStore` ‖ `DatomicStore` (langchain.db `:db-api`); append-only ledger |
+| `src/yomi/intelllm.kotoba` | **intel-LLM** — the contained intelligence node (intel advisor); mock ‖ real LLM via `langchain.model` |
+| `src/yomi/governor.kotoba` | **IntelGovernor** — independent intel invariants; HOLD on unsourced-claim, missing-provenance, non-open-fulltext, libel-risk, non-fleet-model, no-actuation; publish-gate HOLD on low-credibility/low-priority |
+| `src/yomi/phase.kotoba` | R0→R3 staged rollout (path-reserved → supervised); `:publish` auto at R3 (no council) |
+| `src/yomi/synthesis.kotoba` | **IntelActor** — the langgraph-clj StateGraph (1 run = 1 op); no `:request-approval` node (autonomous) |
+| `src/yomi/sim.kotoba` | demo driver |
+| `test/yomi/governor_contract_test.kotoba` | the intel invariant, executable |
+| `test/yomi/store_contract_test.kotoba` | `MemStore ≡ DatomicStore` |
 
 ## Status
 
