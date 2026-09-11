@@ -84,9 +84,9 @@ or a mention edge is an EAVT ground datom, not a code change.
 ## Run
 
 ```bash
-clojure -M:dev:run     # drive assessments through one IntelActor
-clojure -M:dev:test    # the intel contract as executable tests
-clojure -M:lint        # clj-kondo (errors fail)
+kbb -M:dev:run     # drive assessments through one IntelActor
+kbb -M:dev:test    # the intel contract as executable tests
+kbb -M:lint        # clj-kondo (errors fail)
 ```
 
 Demo walks: ingest a new outlet+article → `art-nhk-1` clean open

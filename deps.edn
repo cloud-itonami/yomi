@@ -14,7 +14,7 @@
   :dev {:override-deps
         {io.github.kotoba-lang/langchain
          {:local/root "../../kotoba-lang/langchain"}}}
-  ;; clojure -M:dev:run → drive news-intelligence assessment through one actor
+  ;; kbb -M:dev:run → drive news-intelligence assessment through one actor
   :run {:main-opts ["-m" "yomi.sim"]}
   :test {:extra-paths ["test"]
          :extra-deps {io.github.cognitect-labs/test-runner
