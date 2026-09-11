@@ -13,7 +13,7 @@
     phase 0             :publish in path-reserved → held (phase-disabled)
     backend swap        the same contract on DatomicStore
 
-  Run: clojure -M:dev:run"
+  Run: kbb -M:dev:run"
   (:require [langgraph.graph :as g]
             [yomi.store :as store]
             [yomi.synthesis :as syn]))

@@ -58,8 +58,8 @@ PUBLISH gate (op `:publish` only): `:low-credibility` (< 0.7) and
   kawaraban — recording a mirror edge here is the observe charter, always on.
   The PRIVATE region (fulltext cache, assessments, ledger) is yomi's OWN output
   and is never written to a public Datom log via these calls.
-- Tests are standalone-runnable (`clojure -M:dev:test`) AND clj-kondo-clean
-  (`clojure -M:lint`, errors fail). Keep them so.
+- Tests are standalone-runnable (`kbb -M:dev:test`) AND clj-kondo-clean
+  (`kbb -M:lint`, errors fail). Keep them so.
 
 ## Siblings / boundaries
 
