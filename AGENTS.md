@@ -1,7 +1,7 @@
 # yomi 読み — CLAUDE instructions
 
 News-INTELLIGENCE actor (a SOURCE / VOICE). ADR-2606281500 (種をまく doctrine)
-+ ADR-0001. **Read the root `/CLAUDE.md` Charter + substrate rules first.**
++ ADR-0001. **Read the root `/AGENTS.md` Charter + substrate rules first.**
 yomi-specific invariants below make the Charter concrete for this actor; they
 weaken nothing.
 
